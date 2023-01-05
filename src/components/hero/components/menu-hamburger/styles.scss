@@ -1,0 +1,36 @@
+@import "../../../../styles/variables";
+.lines {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  span {
+    background-color: $darkBlue;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  .line1 {
+    top: 30%;
+  }
+  .line2 {
+    top: 50%;
+  }
+  .line3 {
+    top: 70%;
+  }
+
+  .open0 {
+    top: 50%;
+    transform: rotate(40deg);
+  }
+  .open1 {
+    top: 50%;
+    transform: rotate(40deg);
+  }
+  .open2 {
+    top: 50%;
+    transform: rotate(-40deg);
+  }
+}

@@ -1,0 +1,170 @@
+@import "../../../../styles/variables";
+header {
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  padding: 0 100px;
+  justify-content: space-between;
+  position: relative;
+  width: 100vw;
+}
+
+.logo {
+  display: flex;
+  font-weight: 600;
+  color: $primary;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+.btns {
+  display: flex;
+  gap: 10px;
+  width: auto;
+}
+nav {
+  flex: 1;
+  display: flex;
+
+  ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    gap: 60px;
+    li a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      font-size: 0.95rem;
+      text-transform: capitalize;
+    }
+    li a::before {
+      position: absolute;
+      content: "";
+      left: 0%;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background-color: aqua;
+      transition: 0.2s;
+    }
+
+    li:hover a::before {
+      width: 100%;
+    }
+  }
+}
+.menu {
+  display: none;
+}
+
+@media (max-width: $desktopSmall) {
+  header {
+    padding: 0 40px 0 40px;
+
+    .logo {
+      img {
+        width: 50px;
+      }
+    }
+    nav ul {
+      gap: 45px;
+    }
+    nav ul li a {
+      font-size: 0.9rem;
+    }
+  }
+}
+@media (max-width: $tabletBig) {
+  header {
+    position: relative;
+    top: 0;
+    background-color: $primary;
+    height: 80px;
+    padding: 0 5% 0 5%;
+    .logo span {
+      display: none;
+      background-color: aqua;
+    }
+    .logo {
+      img {
+        content: url("/public/Logo-blue.png");
+      }
+    }
+    .btns {
+      display: none;
+    }
+    @keyframes open {
+      0% {
+        opacity: 0;
+        top: -100%;
+      }
+      100% {
+        opacity: 1;
+        top: 0;
+        height: auto;
+      }
+    }
+    @keyframes close {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    nav {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      justify-content: center;
+      margin-left: -5%;
+      top: 0;
+      margin-top: 70px;
+      ul {
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+        background-color: $primary;
+        width: 80%;
+        max-width: 100%;
+        padding-left: 0;
+        border-radius: 3px;
+      }
+      ul li a {
+        height: 100%;
+        color: $purple;
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+      ul li {
+        display: flex;
+        align-items: center;
+
+        height: 50px;
+        padding-left: 20px;
+        border-bottom: 0.2px solid $gray;
+      }
+    }
+    .menu-open {
+      display: flex;
+      animation: open 0.6s forwards;
+    }
+    .menu-close {
+      animation: close 0.3s forwards;
+    }
+  }
+  .menu {
+    width: 25px;
+    height: 40px;
+    display: flex;
+  }
+}

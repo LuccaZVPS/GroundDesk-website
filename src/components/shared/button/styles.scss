@@ -1,0 +1,18 @@
+@import "../../../styles//variables";
+button {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 12px 35px;
+  font-size: 1.02rem;
+}
+@media (max-width: $desktopSmall) {
+  button {
+    font-size: 0.95rem;
+    padding: 12px 35px;
+  }
+}
+@media (max-width: $smartphone) {
+  button {
+    font-size: 0.8rem;
+  }
+}

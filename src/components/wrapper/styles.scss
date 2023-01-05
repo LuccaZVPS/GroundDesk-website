@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+main {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  background-color: $primary;
+  width: 100%;
+  overflow-x: hidden;
+}
