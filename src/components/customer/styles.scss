@@ -1,0 +1,147 @@
+@import "../../styles/variables";
+.customer {
+  box-sizing: border-box;
+  background-color: $secundary;
+  padding: 150px 100px 150px 100px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  .customer-content {
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 10px;
+    h2 {
+      font-size: 3rem;
+      line-height: 150%;
+      /* or 78px */
+
+      letter-spacing: 0.005em;
+    }
+    p {
+      color: #969696;
+    }
+    button {
+      width: fit-content;
+    }
+  }
+  .customer-img {
+    z-index: 50;
+    width: 40%;
+    img {
+      width: 100%;
+    }
+  }
+  .people {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      color: #343434;
+      font-weight: 600;
+    }
+  }
+  .people-img {
+    img {
+      margin-left: -5px;
+    }
+  }
+}
+.customer::after {
+  position: absolute;
+  content: "";
+  width: 1500px;
+  height: 1500px;
+  border-radius: 50%;
+  background-color: $darkBlue;
+  right: -800px;
+  top: -700px;
+  z-index: 10;
+}
+
+@media (max-width: $desktopSmall) {
+  .customer {
+    .customer-img {
+      width: 50%;
+    }
+
+    .customer-content {
+      h2 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .people {
+        p {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  .customer::after {
+    width: 1200px;
+    height: 1200px;
+    right: -700px;
+    top: -500px;
+  }
+}
+@media (max-width: $tabletBig) {
+  .customer {
+    padding: 100px 40px 100px 40px;
+
+    flex-direction: column;
+    .customer-content {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    .people {
+      width: 100%;
+      justify-content: center;
+    }
+    .customer-img {
+      width: 100%;
+    }
+  }
+  .customer::after {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+@media (max-width: $smartphone) {
+  .customer {
+    padding: 100px 20px 100px 20px;
+
+    .customer-content {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      h2 {
+        font-size: 1.7rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    .people {
+      font-size: 0.85rem;
+      img {
+        display: none;
+      }
+    }
+  }
+}

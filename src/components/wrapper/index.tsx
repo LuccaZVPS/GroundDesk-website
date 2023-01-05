@@ -1,3 +1,4 @@
+import { Customer } from "../customer";
 import { Hero } from "../hero";
 import { Solution } from "../solution";
 import "./styles.scss";
@@ -6,6 +7,7 @@ export const Wrapper = () => {
     <main>
       <Hero />
       <Solution />
+      <Customer />
     </main>
   );
 };
