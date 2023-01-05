@@ -81,11 +81,12 @@ nav {
 }
 @media (max-width: $tabletBig) {
   header {
-    position: relative;
+    position: fixed;
     top: 0;
     background-color: $primary;
     height: 80px;
     padding: 0 5% 0 5%;
+    border-bottom: 1px solid gray;
     .logo span {
       display: none;
       background-color: aqua;
@@ -132,10 +133,11 @@ nav {
         gap: 10px;
         width: fit-content;
         background-color: $primary;
-        width: 80%;
-        max-width: 100%;
+        width: 500px;
+        max-width: 90%;
         padding-left: 0;
         border-radius: 3px;
+        box-shadow: 0 0 3px black;
       }
       ul li a {
         height: 100%;
