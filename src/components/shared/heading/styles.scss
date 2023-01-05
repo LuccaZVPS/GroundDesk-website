@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+h2 {
+  font-size: 2.5rem;
+  color: $heading;
+  margin: 0;
+}
+@media (max-width: $desktopSmall) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: $smartphone) {
+  h2 {
+    font-size: 1.7rem;
+  }
+}
