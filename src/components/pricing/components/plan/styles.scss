@@ -1,0 +1,101 @@
+@import "../../../../styles/variables";
+.plan {
+  background: $primary;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  padding: 40px 40px;
+  width: 450px;
+  box-sizing: border-box;
+  h3 {
+    color: $heading;
+    font-size: 1.3rem;
+  }
+  .price {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    display: flex;
+    color: $heading;
+    justify-content: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    align-items: center;
+    span {
+      color: $gray;
+      font-size: 0.8rem;
+      margin-top: 5px;
+    }
+  }
+  button {
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .benefits-container {
+    margin-top: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $heading;
+    .benefit {
+      display: flex;
+      gap: 10px;
+    }
+
+    .no-active {
+      text-decoration: line-through;
+    }
+
+    .benefit-status {
+      background: #c4c4c4;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #152c5b;
+    }
+
+    .status-no-active {
+      background-color: #c4c4c4;
+    }
+    .best-benefit {
+      background: #ffffff;
+    }
+  }
+  .best {
+    color: #ffffff;
+  }
+}
+@media (max-width: $desktopSmall) {
+  .plan {
+    padding: 40px 25px;
+    p {
+      font-size: 0.9rem;
+    }
+    .benefit {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: $tabletBig) {
+  .plan {
+    padding: 40px 25px;
+    width: 100%;
+  }
+}
+@media (max-width: $tabletMedium) {
+  .plan {
+    padding: 20px 15px;
+    p {
+      font-size: 0.8rem;
+    }
+    .benefit {
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+.pricing {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin-bottom: 100px;
+  padding: 0 60px;
+  p {
+    color: #969696;
+  }
+  .toogle-container {
+    display: flex;
+    gap: 10px;
+    color: $headingSecundary;
+    font-weight: 600;
+    align-items: center;
+  }
+  .plan-container {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+@media (max-width: $tabletBig) {
+  .pricing {
+    align-items: flex-start;
+    padding: 0 40px;
+    p {
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .toogle-container {
+      font-size: 0.9rem;
+    }
+    .plan-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+  }
+}
+@media (max-width: $smartphone) {
+  .pricing {
+    align-items: flex-start;
+    padding: 0 20px;
+    p {
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    .plan-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
