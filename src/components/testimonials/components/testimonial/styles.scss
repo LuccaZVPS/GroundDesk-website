@@ -1,0 +1,40 @@
+.testimonial {
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  padding: 30px 28px;
+  width: 350px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    div {
+      margin-top: 10px;
+    }
+    img {
+      width: fit-content;
+    }
+    h3 {
+      color: #343434;
+      margin-bottom: -10px;
+    }
+    h4 {
+      color: #969696;
+      font-weight: 400;
+    }
+  }
+  p {
+    color: #969696;
+    font-size: 0.9rem;
+  }
+  .stars {
+    display: flex;
+    gap: 5px;
+    img {
+      width: 20px;
+    }
+  }
+}

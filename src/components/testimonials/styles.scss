@@ -1,0 +1,65 @@
+@import "../../styles/variables";
+.testimonials {
+  padding: 0 100px;
+  box-sizing: border-box;
+  .controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .right {
+      transform: rotate(180deg);
+    }
+    .control {
+      display: flex;
+      gap: 25px;
+      div {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: solid 1px #0c0047;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        width: 30px;
+      }
+    }
+  }
+  .testimonial-container {
+    transition: 0.4s;
+    margin-top: 100px;
+  }
+  .slider {
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 30px;
+    width: max-content;
+  }
+}
+@media (max-width: $desktopSmall) {
+  .testimonials {
+    padding: 0 40px;
+  }
+}
+@media (max-width: $tabletMedium) {
+  .testimonials {
+    .controls {
+      .control {
+        display: none;
+      }
+    }
+    .testimonial-container {
+      overflow-x: auto;
+      padding: 20px 0;
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: $smartphone) {
+  .testimonials {
+    padding: 0 20px;
+  }
+}
