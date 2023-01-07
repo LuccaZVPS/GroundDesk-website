@@ -25,8 +25,9 @@ export const Pricing = () => {
         Annualy
       </div>
       <div className="plan-container">
-        {plans.map((plan) => (
+        {plans.map((plan, n: number) => (
           <Plan
+            key={n}
             month={toogle}
             best={plan.best}
             title={plan.title}

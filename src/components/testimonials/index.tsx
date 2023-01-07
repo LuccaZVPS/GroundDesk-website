@@ -45,8 +45,9 @@ export const Testimonials = () => {
       </div>
       <div className="testimonial-container" ref={slider}>
         <div className="slider">
-          {data.map((testimonial) => (
+          {data.map((testimonial, n: number) => (
             <Testimonial
+              key={n}
               img={testimonial.img}
               name={testimonial.name}
               role={testimonial.role}

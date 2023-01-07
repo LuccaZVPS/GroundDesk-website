@@ -12,8 +12,8 @@ export const Solution = () => {
       </p>
 
       <div className="solution-box-container">
-        {data.map((info) => (
-          <Box img={info.img} title={info.title} txt={info.txt} />
+        {data.map((info, n: number) => (
+          <Box key={n} img={info.img} title={info.title} txt={info.txt} />
         ))}
       </div>
     </section>

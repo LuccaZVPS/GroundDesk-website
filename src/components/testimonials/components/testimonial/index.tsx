@@ -16,7 +16,7 @@ export const Testimonial = ({ img, name, role, text, stars }: testimonial) => {
       </div>
       <div className="stars">
         {[...Array(stars)].map((e, i) => (
-          <img src={star} />
+          <img key={i} src={star} />
         ))}
       </div>
     </div>

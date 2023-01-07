@@ -64,8 +64,9 @@ export const Plan = ({
         color={`${best ? "#152C5B" : "#FFFFFF"}`}
       />
       <div className="benefits-container">
-        {benefits.map((benefit) => (
+        {benefits.map((benefit, n: number) => (
           <div
+            key={n}
             className={`benefit${" "}${
               benefit.active ? "" : "no-active"
             }${" "}${best ? "best" : ""}`}
