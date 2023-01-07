@@ -7,7 +7,7 @@ import "./styles.scss";
 export const Pricing = () => {
   const [toogle, setToogle] = useState(false);
   return (
-    <section className="pricing">
+    <section id="pricing" className="pricing">
       <Heading txt="Our pricing" />
       <p>
         Pay securely online and manage the booking via desktop or via the mobile

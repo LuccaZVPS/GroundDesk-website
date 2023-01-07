@@ -31,7 +31,7 @@ export const Testimonials = () => {
     setCount(count - 1);
   };
   return (
-    <section className="testimonials">
+    <section id="testimonials" className="testimonials">
       <div className="controls">
         <Heading txt="Ground Desk is loved by users" />
         <div className="control">

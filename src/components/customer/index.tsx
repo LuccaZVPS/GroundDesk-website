@@ -9,7 +9,7 @@ import "./styles.scss";
 import { Button } from "../shared/button";
 export const Customer = () => {
   return (
-    <section className="customer">
+    <section id="customer" className="customer">
       <div className="customer-content">
         <Heading txt="Easy collaborative financial team" />
         <p>
