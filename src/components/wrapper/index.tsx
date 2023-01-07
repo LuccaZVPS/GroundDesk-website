@@ -1,4 +1,5 @@
 import { Customer } from "../customer";
+import { Footer } from "../footer";
 import { Hero } from "../hero";
 import { Pricing } from "../pricing";
 import { Solution } from "../solution";
@@ -12,6 +13,7 @@ export const Wrapper = () => {
       <Customer />
       <Pricing />
       <Testimonials />
+      <Footer />
     </main>
   );
 };
