@@ -21,19 +21,19 @@ export const Header = () => {
       <nav ref={menu}>
         <ul>
           <li>
-            <a href="#">Product</a>
+            <a href="#product">Product</a>
           </li>
           <li>
-            <a href="#">Solution</a>
+            <a href="#solution">Solution</a>
           </li>
           <li>
-            <a href="#">Customer</a>
+            <a href="#customer">Customer</a>
           </li>
           <li>
-            <a href="#">Pricing</a>
+            <a href="#pricing">Pricing</a>
           </li>
           <li>
-            <a href="#">About us</a>
+            <a href="#testimonials">Testimonials</a>
           </li>
         </ul>
       </nav>
