@@ -99,26 +99,6 @@ nav {
     .btns {
       display: none;
     }
-    @keyframes open {
-      0% {
-        opacity: 0;
-        top: -100%;
-      }
-      100% {
-        opacity: 1;
-        top: 0;
-        height: auto;
-      }
-    }
-    @keyframes close {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        display: none;
-      }
-    }
 
     nav {
       overflow: hidden;
@@ -127,17 +107,23 @@ nav {
       justify-content: center;
       margin-left: -5%;
       top: 0;
-      margin-top: 70px;
+      margin-top: 62px;
+      z-index: 100;
       ul {
+        box-sizing: border-box;
         flex-direction: column;
         gap: 10px;
-        width: fit-content;
         background-color: $primary;
-        width: 500px;
-        max-width: 90%;
         padding-left: 0;
-        border-radius: 3px;
-        box-shadow: 0 0 3px black;
+        overflow: hidden;
+        transition: all 0.5s;
+        width: 100%;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.61);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8.2px);
+        -webkit-backdrop-filter: blur(8.2px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
       }
       ul li a {
         height: 100%;
@@ -146,22 +132,21 @@ nav {
         align-items: center;
         font-size: 1.05rem;
         font-weight: 600;
+        width: 100%;
+        justify-content: center;
       }
       ul li {
         display: flex;
         align-items: center;
-
         height: 50px;
-        padding-left: 20px;
-        border-bottom: 0.2px solid $gray;
       }
     }
-    .menu-open {
-      display: flex;
-      animation: open 0.6s forwards;
+    .menu-open ul {
+      height: 300px;
     }
-    .menu-close {
-      animation: close 0.3s forwards;
+
+    .menu-close ul {
+      height: 0px;
     }
   }
   .menu {
