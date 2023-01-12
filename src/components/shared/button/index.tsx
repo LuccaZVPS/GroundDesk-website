@@ -5,5 +5,9 @@ interface props {
   background: string;
 }
 export const Button = ({ txt, background, color }: props) => {
-  return <button style={{ background, color }}>{txt}</button>;
+  return (
+    <button className="btn-shared" style={{ background, color }}>
+      {txt}
+    </button>
+  );
 };

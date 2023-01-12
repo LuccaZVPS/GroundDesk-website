@@ -1,9 +1,13 @@
 @import "../../../styles//variables";
-button {
+.btn-shared {
   border: 1px solid #ffffff;
   border-radius: 8px;
   padding: 12px 35px;
   font-size: 1.02rem;
+  cursor: pointer;
+}
+.btn-shared:hover {
+  box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 @media (max-width: $desktopSmall) {
   button {
